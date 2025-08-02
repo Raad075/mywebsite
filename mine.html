@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Donation Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background-color: #111;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5 {
+            color: red;
+        }
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            margin: 30px auto;
+            border-radius: 10px;
+            max-width: 700px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 8px 0;
+        }
+        input[type=text], input[type=email], input[type=number], input[type=tel], input[type=password], textarea, select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #ff4d4d;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            margin-top: 5px;
+            background-color: #222;
+            color: white;
+        }
+        textarea {
+            resize: vertical;
+            height: 60px;
+        }
+        input[type=submit], input[type=reset] {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 10px 0 0;
+        }
+        .checkbox-group input[type=checkbox], .radio-group input[type=radio] {
+            width: auto;
+            margin-right: 6px;
+        }
+        .checkbox-group label, .radio-group label {
+            margin-right: 15px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>1 Donation &gt; 2 Confirmation &gt; Thank You!</h1>
+
+    <form id="donationForm">
+        <h2>Donor Information</h2>
+        <table>
+            <tr><td>First Name:</td></tr>
+            <tr><td><input type="text" name="first_name" required></td></tr>
+
+            <tr><td>Last Name:</td></tr>
+            <tr><td><input type="text" name="last_name" required></td></tr>
+
+            <tr><td>Password:</td></tr>
+            <tr><td><input type="password" name="password" required minlength="6"></td></tr>
+
+            <tr><td>Company:</td></tr>
+            <tr><td><input type="text" name="company"></td></tr>
+
+            <tr><td>Address 1:</td></tr>
+            <tr><td><input type="text" name="address1"></td></tr>
+
+            <tr><td>Address 2:</td></tr>
+            <tr><td><input type="text" name="address2"></td></tr>
+
+            <tr><td>City:</td></tr>
+            <tr><td><input type="text" name="city"></td></tr>
+
+            <tr><td>State:</td></tr>
+            <tr><td>
+                <select name="state">
+                    <option value="">--Select--</option>
+                    <option>California</option>
+                    <option>Virginia</option>
+                    <option>Los Angeles</option>
+                </select>
+            </td></tr>
+
+            <tr><td>Zip Code:</td></tr>
+            <tr><td><input type="number" name="zipcode"></td></tr>
+
+            <tr><td>Country:</td></tr>
+            <tr><td>
+                <select name="country">
+                    <option value="">--Select--</option>
+                    <option>India</option>
+                    <option>Bangladesh</option>
+                    <option>China</option>
+                </select>
+            </td></tr>
+
+            <tr><td>Phone:</td></tr>
+            <tr><td><input type="tel" name="phone" required></td></tr>
+
+            <tr><td>Fax:</td></tr>
+            <tr><td><input type="text" name="fax"></td></tr>
+
+            <tr><td>Email:</td></tr>
+            <tr><td><input type="email" name="email" required></td></tr>
+
+            <tr><td>Donation Amount:</td></tr>
+            <tr><td class="radio-group">
+                <label><input type="radio" name="amount" value="50">$50</label>
+                <label><input type="radio" name="amount" value="75">$75</label>
+                <label><input type="radio" name="amount" value="100">$100</label>
+                <label><input type="radio" name="amount" value="250">$250</label>
+                <label><input type="radio" name="amount" value="other">Other</label>
+            </td></tr>
+
+            <tr><td>Other Amount:</td></tr>
+            <tr><td><input type="number" name="other_amount" min="0" step="any"></td></tr>
+
+            <tr><td>Recurring Donation:</td></tr>
+            <tr><td class="checkbox-group"><label><input type="checkbox" name="recurring"> I am interested in giving on a regular basis.</label></td></tr>
+
+            <tr><td>Monthly Credit Card$:</td></tr>
+            <tr><td><input type="text" name="monthly_amount"></td></tr>
+
+            <tr><td>For:</td></tr>
+            <tr><td><input type="text" name="for_"></td></tr>
+
+            <tr><td>Months:</td></tr>
+            <tr><td><input type="text" name="months"></td></tr>
+        </table>
+
+        <h3>Honorarium and Memorial Donation Information</h3>
+        <table>
+            <tr><td>I would like to make the donation:</td></tr>
+            <tr><td class="radio-group">
+                <label><input type="radio" name="donation_type" value="to_monitor">To Monitor</label>
+                <label><input type="radio" name="donation_type" value="in_memory_of">In Memory Of</label>
+            </td></tr>
+
+            <tr><td>Name:</td></tr>
+            <tr><td><input type="text" name="honor_name"></td></tr>
+
+            <tr><td>Acknowledge Donation To:</td></tr>
+            <tr><td><input type="text" name="acknowledge_to"></td></tr>
+
+            <tr><td>Address:</td></tr>
+            <tr><td><input type="text" name="haddress"></td></tr>
+
+            <tr><td>City:</td></tr>
+            <tr><td><input type="text" name="city"></td></tr>
+
+            <tr><td>State:</td></tr>
+            <tr><td>
+                <select name="honor_state">
+                    <option value="">--Select--</option>
+                    <option>California</option>
+                    <option>Virginia</option>
+                    <option>Los Angeles</option>
+                </select>
+            </td></tr>
+
+            <tr><td>Zip:</td></tr>
+            <tr><td><input type="number" name="honor_zip" placeholder="Enter zip code"></td></tr>
+        </table>
+
+        <h4>Additional Information</h4>
+        <h5>Please enter your name, company or organization as you would like it to appear in our publications:</h5>
+        <table>
+            <tr><td>Name:</td></tr>
+            <tr><td><input type="text" name="name"></td></tr>
+
+            <tr><td class="checkbox-group">
+                <label><input type="checkbox" name="gift">I would like my gift to remain anonymous.</label><br>
+                <label><input type="checkbox" name="gift">My employer offers a matching gift program. I will mail the matching gift form.</label><br>
+                <label><input type="checkbox" name="thankyou">Please save the cost of acknowledging this gift by not mailing a thank you.</label>
+            </td></tr>
+
+            <tr><td>Comments:<br>(Please type any questions or feedback here)</td></tr>
+            <tr><td><textarea name="comments" placeholder="Your comments here..."></textarea></td></tr>
+
+            <tr><td>How may we contact you?</td></tr>
+            <tr><td class="checkbox-group">
+                <label><input type="checkbox" name="cemail">E-mail</label>
+                <label><input type="checkbox" name="postal">Postal Mail</label>
+                <label><input type="checkbox" name="phone">Telephone</label>
+                <label><input type="checkbox" name="fax">Fax</label>
+            </td></tr>
+
+            <tr><td>I would like to receive newsletters and info by:</td></tr>
+            <tr><td class="checkbox-group">
+                <label><input type="checkbox" name="email">E-mail</label>
+                <label><input type="checkbox" name="postal">Postal Mail</label><br>
+                <label><input type="checkbox" name="other">I would like information about volunteering with the organization.</label>
+            </td></tr>
+
+            <tr>
+                <td style="text-align:center;">
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="font-size: 12px; padding-top: 20px; color: #bbb;">
+                    Donate Online With Confidence. You are on a secure server.<br>
+                    If you have any problems or questions, please contact support.
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+
+<script>
+    
+    const form = document.getElementById('donationForm');
+    form.addEventListener('submit', function(e){
+        e.preventDefault();
+        
+        const firstName = form.elements['first_name'].value.trim();
+        const lastName = form.elements['last_name'].value.trim();
+        const email = form.elements['email'].value.trim();
+        const password = form.elements['password'].value;
+        const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+
+if (!specialCharPattern.test(password)) {
+    alert("Password must contain at least one special character.");
+    return;
+}
+        
+        if(firstName === " " || password === " " || lastName === " " || email === " ") {
+            alert("Please fill all required fields.");
+            return;
+        }
+        if(password.length < 6){
+            alert("Password must be at least 6 characters.");
+            return;
+        }
+
+        alert("Form submitted successfully!");
+        
+        // redirect to thankyou.html after alert
+        window.location.href = "thankyou.html";
+    });
+
+
+</script>
+
+</body>
+</html>
